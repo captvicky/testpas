@@ -29,72 +29,75 @@
     
 </head>
 <body>
-    <!-- KUNCI KAMAR RAHASIA -->
-<div id="kunci" style="
+    <div id="preloadContainer" class="fill-viewport"><div style="z-index: 4; position: absolute; overflow: hidden; background-size: contain; background-image: url('loading/HTMLImage_90071C2D_B47E_4DF9_41A9_F79EE4B0DA40.gif'); background-repeat: no-repeat; background-position: center center; overflow: hidden; right: 0.32%; bottom: 37.54%; width: 99.68%; height: 12.29%" ></div><div style="z-index: 5; position: absolute; overflow: hidden; left: 0%; top: 63.3%; width: 100.00%; height: 11.39%" ><div style="text-align:left; color:#000; "><DIV STYLE="text-align:center;font-size:2.2547914317925586vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.25vmin;"><B>ORIGAE6</B></SPAN></SPAN></DIV><DIV STYLE="text-align:center;font-size:2.2547914317925586vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.25vmin;"><B>PLEASE WAIT</B></SPAN></SPAN></DIV></div></div></div>
+    <div id="viewer" class="fill-viewport"></div>
+    <!-- KODE KUNCI RAHASIA -->
+<div id="lock" style="
 position: fixed;
-top: 0; left: 0;
-width: 100%; height: 100%;
-background: rgba(0,0,0,0.9);
-display: none;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: black;
 z-index: 99999;
-text-align: center;
+display: none;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 color: white;
-padding-top: 100px;
 ">
-<h3>🔐 KAMAR RAHASIA VVIP</h3>
+<h2>🔑 AKSES KHUSUS</h2>
 <input 
     type="password" 
-    id="kodeVIP" 
-    placeholder="Masukkan kode 4 digit"
+    id="passInput" 
+    placeholder="Masukkan password"
     style="
         padding: 10px;
-        font-size: 20px;
+        margin: 10px;
         width: 200px;
+        font-size: 16px;
     "
 >
 <button 
-    onclick="cekKode()"
+    onclick="unlock()"
     style="
-        background: gold;
-        color: black;
         padding: 10px 20px;
+        background: green;
+        color: white;
         border: none;
-        margin-left: 10px;
+        cursor: pointer;
     "
 >BUKA</button>
-<p id="pesanError" style="color: red; display: none">Kode salah!</p>
+<p id="error" style="color: red; display: none">Password salah!</p>
 </div>
 
 <script>
-// KODE RAHASIA (Ganti dengan angka favorit)
-const KODE_BENAR = "2025"; 
+// ========== SETTING ==========
+const LOCKED_ROOM_ID = 2; // Ganti dengan ID panorama yang ingin dikunci
+const PASSWORD = "vip40"; // Ganti dengan password yang diinginkan
+// =============================
 
-function cekKode() {
-const input = document.getElementById('kodeVIP').value;
-const error = document.getElementById('pesanError');
+function unlock() {
+const input = document.getElementById('passInput').value;
+const error = document.getElementById('error');
 
-if(input === KODE_BENAR) {
-    // Buka kamar rahasia (ID panorama 2)
-    window.location.hash = "media=2&loading=0";
-    document.getElementById('kunci').style.display = 'none';
+if(input === PASSWORD) {
+    document.getElementById('lock').style.display = 'none';
+    window.location.hash = `media=${LOCKED_ROOM_ID}&loading=0`;
 } else {
     error.style.display = 'block';
-    document.getElementById('kodeVIP').value = '';
 }
 }
 
-// DETEKSI KAMERA
-document.addEventListener('vtmediachange', function(e) {
-const kameraSekarang = e.detail.media;
+// Deteksi perubahan kamera
+setInterval(function() {
+const currentMedia = parseInt(window.location.hash.split('media=')[1] || 1);
 
-// Jika mencoba masuk ke kamar ID 2
-if(kameraSekarang == 2) { 
-    document.getElementById('kunci').style.display = 'block';
-    window.location.hash = "media=1&loading=0";
+if(currentMedia === LOCKED_ROOM_ID) {
+    document.getElementById('lock').style.display = 'flex';
+    window.location.hash = "media=1&loading=0"; // Kembali ke panorama 1
 }
-});
+}, 500); // Cek setiap 0.5 detik
 </script>
-    <div id="preloadContainer" class="fill-viewport"><div style="z-index: 4; position: absolute; overflow: hidden; background-size: contain; background-image: url('loading/HTMLImage_90071C2D_B47E_4DF9_41A9_F79EE4B0DA40.gif'); background-repeat: no-repeat; background-position: center center; overflow: hidden; right: 0.32%; bottom: 37.54%; width: 99.68%; height: 12.29%" ></div><div style="z-index: 5; position: absolute; overflow: hidden; left: 0%; top: 63.3%; width: 100.00%; height: 11.39%" ><div style="text-align:left; color:#000; "><DIV STYLE="text-align:center;font-size:2.2547914317925586vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.25vmin;"><B>ORIGAE6</B></SPAN></SPAN></DIV><DIV STYLE="text-align:center;font-size:2.2547914317925586vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.25vmin;"><B>PLEASE WAIT</B></SPAN></SPAN></DIV></div></div></div>
-    <div id="viewer" class="fill-viewport"></div>
 </body>
 </html>
