@@ -1,0 +1,53 @@
+#: locale=en
+
+## Action
+
+### URL
+LinkBehaviour_A70C0FD3_B4B1_CAA9_41E0_C1419CBB7B67.source = https://captvicky.com
+LinkBehaviour_ABD89388_B472_5AA7_41A4_46384B8F792A.source = https://dappradar.com/hub/assets/eth/0x5e4a202dc69b3ad36a8b84801cfeba9e5934edd4/3
+LinkBehaviour_95199972_B472_566B_41D8_764B9863E06D.source = https://dappradar.com/hub/assets/eth/0x5e4a202dc69b3ad36a8b84801cfeba9e5934edd4/3
+LinkBehaviour_A32847AB_B4AE_3AF9_41C9_E1728F185725.source = https://etherscan.io/nft/0x5e4a202dc69b3ad36a8b84801cfeba9e5934edd4/3
+LinkBehaviour_A0956725_B4B2_FBE9_41D6_CB5A15889C67.source = https://etherscan.io/nft/0x5e4a202dc69b3ad36a8b84801cfeba9e5934edd4/3
+LinkBehaviour_A63F7BE0_B4B2_4A67_41E5_24D2315F018F.source = https://opensea.io/assets/ethereum/0x5e4a202dc69b3ad36a8b84801cfeba9e5934edd4/3
+LinkBehaviour_A327D7AA_B4AE_3AFB_41BD_3CF3917E7246.source = https://opensea.io/assets/ethereum/0x5e4a202dc69b3ad36a8b84801cfeba9e5934edd4/3
+LinkBehaviour_A329F7AC_B4AE_3AFF_41CF_E57D824D0128.source = origae6.crypto
+
+## Hotspot
+
+### Text
+HotspotPanoramaOverlayTextImage_7B7019FF_4706_8CF7_41B1_A29A6BE81FC3.text = awal
+
+## Media
+
+### Audio
+audiores_933FF592_B47E_3EAB_41DF_1FCA6E580767.mp3Url = media/audio_92E60197_B47E_56A9_41E5_C6974F7B2EA4_en.mp3
+audiores_AB1429B7_B452_36E9_41DC_BE0D80807323.mp3Url = media/audio_AED62742_B45E_3BAB_41E4_939C413525AE_en.mp3
+
+### Audio Subtitles
+
+### Image
+imlevel_7A7FD0AF_4703_9B17_41C1_F8BCB2D2B0E9.url = media/panorama_7D1D4B81_470D_8D0B_4191_10CB21367D4C_HS_bwt960dt_en.png
+
+### Title
+panorama_AF0B370B_B451_FBB9_41E0_9F3BE48BAC7D.label = 1
+panorama_7D1D4B81_470D_8D0B_4191_10CB21367D4C.label = 2
+panorama_79723F59_4705_853B_41B6_2BBA737B55D6.label = 3
+
+## Skin
+
+### Image
+Image_A5183EA7_B4B2_4AE9_41D4_7AFFE86BA648.url = skin/Image_A5183EA7_B4B2_4AE9_41D4_7AFFE86BA648_en.png
+Image_A5183EA7_B4B2_4AE9_41D4_7AFFE86BA648_mobile.url = skin/Image_A5183EA7_B4B2_4AE9_41D4_7AFFE86BA648_mobile_en.png
+Image_A5AC7A4C_B4B1_D5BF_41E2_FBD375043B55.url = skin/Image_A5AC7A4C_B4B1_D5BF_41E2_FBD375043B55_en.png
+Image_A5AC7A4C_B4B1_D5BF_41E2_FBD375043B55_mobile.url = skin/Image_A5AC7A4C_B4B1_D5BF_41E2_FBD375043B55_mobile_en.png
+Image_A5FCBDCE_B4B2_CEBB_41DD_C786311B2165.url = skin/Image_A5FCBDCE_B4B2_CEBB_41DD_C786311B2165_en.gif
+Image_A5FCBDCE_B4B2_CEBB_41DD_C786311B2165_mobile.url = skin/Image_A5FCBDCE_B4B2_CEBB_41DD_C786311B2165_mobile_en.gif
+Image_ABCEDE83_B46E_4AA9_41D0_F132E11884AC.url = skin/Image_ABCEDE83_B46E_4AA9_41D0_F132E11884AC_en.png
+Image_ABCEDE83_B46E_4AA9_41D0_F132E11884AC_mobile.url = skin/Image_ABCEDE83_B46E_4AA9_41D0_F132E11884AC_mobile_en.png
+
+## Tour
+
+### Description
+
+### Title
+tour.name = Joy In Anger

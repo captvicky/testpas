@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Joy In Anger</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" id="metaViewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover" data-tdv-general-scale="0.5"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <script src="lib/tdvplayer.js?v=1740667623503"></script>
+    <link rel="preload" href="locale/en.txt?v=1740667623503" as="fetch" crossorigin="anonymous"/>
+	<link rel="preload" href="script.js?v=1740667623503" as="script"/>
+	<link rel="preload" href="media/panorama_AF0B370B_B451_FBB9_41E0_9F3BE48BAC7D_0/r/1/0_0.jpg?v=1740667623503" as="image"/>
+	<link rel="preload" href="media/panorama_AF0B370B_B451_FBB9_41E0_9F3BE48BAC7D_0/l/1/0_0.jpg?v=1740667623503" as="image"/>
+	<link rel="preload" href="media/panorama_AF0B370B_B451_FBB9_41E0_9F3BE48BAC7D_0/u/1/0_0.jpg?v=1740667623503" as="image"/>
+	<link rel="preload" href="media/panorama_AF0B370B_B451_FBB9_41E0_9F3BE48BAC7D_0/d/1/0_0.jpg?v=1740667623503" as="image"/>
+	<link rel="preload" href="media/panorama_AF0B370B_B451_FBB9_41E0_9F3BE48BAC7D_0/f/1/0_0.jpg?v=1740667623503" as="image"/>
+	<link rel="preload" href="media/panorama_AF0B370B_B451_FBB9_41E0_9F3BE48BAC7D_0/b/1/0_0.jpg?v=1740667623503" as="image"/>
+	<meta name="description" content="Virtual Tour"/>
+	<meta name="theme-color" content="#000000"/>
+    <script src="script.js?v=1740667623503"></script>
+    <style type="text/css">
+        html, body { height:100%; width:100%; height:100vh; width:100vw; margin:0; padding:0; overflow:hidden; }
+        .fill-viewport { position:fixed; top:0; left:0; right:0; bottom:0; padding:0; margin:0; overflow: hidden; }
+        .fill-viewport.landscape-left { left: env(safe-area-inset-left); }
+		.fill-viewport.landscape-right { right: env(safe-area-inset-right); }
+        #viewer { z-index:1; }
+        #preloadContainer { z-index:2; opacity:0; background-color:rgba(0,0,0,1); transition: opacity 0.5s; -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s;}
+    </style>
+    
+</head>
+<body>
+    <!-- KUNCI KAMAR RAHASIA -->
+<div id="kunci" style="
+position: fixed;
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.9);
+display: none;
+z-index: 99999;
+text-align: center;
+color: white;
+padding-top: 100px;
+">
+<h3>🔐 KAMAR RAHASIA VVIP</h3>
+<input 
+    type="password" 
+    id="kodeVIP" 
+    placeholder="Masukkan kode 4 digit"
+    style="
+        padding: 10px;
+        font-size: 20px;
+        width: 200px;
+    "
+>
+<button 
+    onclick="cekKode()"
+    style="
+        background: gold;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        margin-left: 10px;
+    "
+>BUKA</button>
+<p id="pesanError" style="color: red; display: none">Kode salah!</p>
+</div>
+
+<script>
+// KODE RAHASIA (Ganti dengan angka favorit)
+const KODE_BENAR = "2025"; 
+
+function cekKode() {
+const input = document.getElementById('kodeVIP').value;
+const error = document.getElementById('pesanError');
+
+if(input === KODE_BENAR) {
+    // Buka kamar rahasia (ID panorama 2)
+    window.location.hash = "media=2&loading=0";
+    document.getElementById('kunci').style.display = 'none';
+} else {
+    error.style.display = 'block';
+    document.getElementById('kodeVIP').value = '';
+}
+}
+
+// DETEKSI KAMERA
+document.addEventListener('vtmediachange', function(e) {
+const kameraSekarang = e.detail.media;
+
+// Jika mencoba masuk ke kamar ID 2
+if(kameraSekarang == 2) { 
+    document.getElementById('kunci').style.display = 'block';
+    window.location.hash = "media=1&loading=0";
+}
+});
+</script>
+    <div id="preloadContainer" class="fill-viewport"><div style="z-index: 4; position: absolute; overflow: hidden; background-size: contain; background-image: url('loading/HTMLImage_90071C2D_B47E_4DF9_41A9_F79EE4B0DA40.gif'); background-repeat: no-repeat; background-position: center center; overflow: hidden; right: 0.32%; bottom: 37.54%; width: 99.68%; height: 12.29%" ></div><div style="z-index: 5; position: absolute; overflow: hidden; left: 0%; top: 63.3%; width: 100.00%; height: 11.39%" ><div style="text-align:left; color:#000; "><DIV STYLE="text-align:center;font-size:2.2547914317925586vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.25vmin;"><B>ORIGAE6</B></SPAN></SPAN></DIV><DIV STYLE="text-align:center;font-size:2.2547914317925586vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:2.25vmin;"><B>PLEASE WAIT</B></SPAN></SPAN></DIV></div></div></div>
+    <div id="viewer" class="fill-viewport"></div>
+</body>
+</html>
